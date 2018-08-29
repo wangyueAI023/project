@@ -1,5 +1,5 @@
 //var oShow = document.getElementById('show');
-
+window.onload = function(){
 var pic=['0pLKZeHD1mx2v31NPCL0p4T1808091712_1920_506.jpg',
          '4JFuZkWWXTu3Gu4SiZO2VCsZ-pcT1808091627_1920_506.jpg',
          '4ThdwIGA7eaaHTlOTTCVPCNiFwT1808091449_1920_506.jpg',
@@ -14,5 +14,5 @@ function begin()	{
 	console.log(i,pic[i]);
 }
 setInterval(begin,3000);
-
+}
 
