@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script src="js/js.js"></script>
 </head>
 <body>
 	<header>
@@ -114,12 +115,12 @@
 	        <p>2588.00</p>
 	     </div>
 	     <div>
-	          <button>-</button>
-	          <input type="text" />
-	          <button>+</button>
+	          <button id="btn1">-</button>
+	          <input type="text"  value="1" id="msg1"/>
+	          <button id="btn2">+</button>
 	     </div>
 	     <div>
-	     	<p>2588.00</p>
+	     	<p id="money1">2588.00</p>
 	     </div>
 	     <div>
 	         <p class="p1"><a href="#">删除</a></p>
@@ -156,12 +157,12 @@
 	        <p>1885.00</p>
 	     </div>
 	     <div>
-	          <button>-</button>
-	          <input type="text" />
-	          <button>+</button>
+	          <button id="btn3">-</button>
+	          <input type="text"   value="1" id="msg2"/>
+	          <button id="btn4">+</button>
 	     </div>
 	     <div>
-	     	<p>1885.00</p>
+	     	<p id="money2">1885.00</p>
 	     </div>
 	     <div>
 	         <p class="p1"><a href="#">删除</a></p>
@@ -184,7 +185,7 @@
 		</div>
 		<div class="right fr">
 			<div class="right1 fl">
-			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;">￥0.00</span></p>
+			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;" id="amount">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;" id="accounts">￥0.00</span></p>
 			     <p class="p2">
 			     	<span>活动优惠：-￥0.00</span>
 			     	<span>商品应付总计：￥0.00</span>
@@ -415,4 +416,6 @@
 			
 		</div>
 	</footer>
+	
 </body>
+</html>
