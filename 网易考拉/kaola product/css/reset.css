@@ -138,13 +138,21 @@ main .title .box .list1 li a:hover {color: #E31436;}
 
 /* 放大镜 */
 main .product{width: 100%;height: 595px;border: 1px solid #ccc;}
-main .product .left{width: 402px;height: 595px;}
-main .product .left #small{width: 402px;height: 400px;margin-top: 37px;border: 1px solid #ccc;position: relative;}
+main .product .left{width: 400px;height: 595px;}
+main .product .left #small{width: 400px;height: 400px;margin-top: 37px;border: 1px solid #ccc;position: relative;}
 main .product .left #small img{width: 100%;height: 100%;}
-main .product .left #small #drag{width: 160px; height: 160px; background:rgba(192,188,176,.8); position: absolute; left:0; top: 0; display: block;}
-main .product .left #small #mask{width: 402px;height: 400px;/*  background:rgba(0, 255, 255, 0.212); */ position: absolute; left: 0; top: 0; }
-main .product .left #big{width: 402px;height: 400px; overflow:hidden; position: relative;left: 405px; top: -401px; display:none;}
+main .product .left #small #drag{width: 200px; height: 200px; background:rgba(192,188,176,.8); position: absolute; left:0; top: 0; display: none;}
+main .product .left #small #mask{width: 400px;height: 400px;/*  background:rgba(0, 255, 255, 0.212); */ position: absolute; left: 0; top: 0; }
+main .product .left #big{width: 402px;height: 400px; overflow:hidden; position: absolute;left: 536px; top: 278px; display:none;z-index: 90;}
 main .product .left #big img{position: absolute; left: 0; top: 0;}
+/* 点击效果 */
+main .product .left .click_list{width: 400px;height: 100px;margin-top:10px;}
+main .product .left .click_list .click_left{width: 40px;height: 100px;border: 1px solid #ccc;float: left;font-size: 40px;line-height: 90px;}
+main .product .left .click_list .click_right{width: 40px;height: 100px;border: 1px solid #ccc;float: right;font-size: 40px;line-height: 90px;}
+main .product .left .click_list .pic_ul{width: 316px;height: 100px;float: left;overflow: hidden;}
+main .product .left .click_list .pic_ul ul{width: 420px;height: 100px;}
+main .product .left .click_list .pic_ul ul li{width: 80px;height: 80px;float: left;border: 1px solid #ccc;margin: 10px 11px 0 11px;}
+main .product .left .click_list .pic_ul ul li img{width: 100%;height: 100;}
 
 main .product .right{width: 660px;height: 595px;margin-left: 30px;}
 main .product .right dl dt{width: 660px;height: 40px;margin-top: 37px;}

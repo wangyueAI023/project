@@ -45,6 +45,7 @@ oMask.onmousemove = function(ev){
     //使鼠标在oDrag中正中位置.
     var left = e.clientX - oDrag.offsetWidth; 
 	var top = e.clientY - oDrag.offsetHeight;  
+	//console.log(oDrag.offsetWidth)
 	
     //oDrag只能在OMask的范围内移动
     if(left<0) left=0;
@@ -56,15 +57,12 @@ oMask.onmousemove = function(ev){
 
     oDrag.style.left = left+"px";
     oDrag.style.top = top+"px";
-	console.log(oDrag.style.left);
+	//console.log(oDrag.style.left);
     //大图和小图 实现等比例
     var scaleX = left/maxX;
     var scaleY = top/maxY;
-   // console.log("scale: "+scaleX, scaleY);
     oBigImg.style.left = -(oBigImg.offsetWidth - oBig.offsetWidth)*scaleX+"px";
-	oBigImg.style.top = -(oBigImg.offsetHeight - oBig.offsetHeight)*scaleY+"px";
-	
-
+	oBigImg.style.top = -(oBigImg.offsetHeight - oBig.offsetHeight)*scaleY+"px";	
 }
 oMask.onmouseover = function(){
     oBig.style.display = "block";
@@ -73,5 +71,43 @@ oMask.onmouseover = function(){
 oMask.onmouseout = function(){
     oBig.style.display = "none";
     oDrag.style.display = "none";
+}
+/* 换图片 */
+var  oLeft = document.getElementById("left");
+var  oRight = document.getElementById("right");
+var  oUl = document.getElementById("ul");
+var  oLi = oUl.getElementsByTagName("li");
+var oSmall = document.getElementById("small");
+var oSmall_oImg = oSmall.getElementsByTagName("img")[0];
+
+//console.log(oLi);
+/* 点击换图片 */
+oUl.addEventListener("click",function(e){
+		//console.log(e.target);
+		oSmall_oImg.src = e.target.src;
+		//console.log(oSmall_oImg);
+},false)
+/* 点击左右换图片 */
+oUl.innerHTML += oUl.innerHTML;
+oUl.style.width = oUl.offsetWidth*2+'px';
+
+//if(-oUl.offsetLeft >=oUl.offsetWidth/2) oUl.style.left = 0;
+//if(oUl.offsetLeft >0) oUl.style.left = -oUl.offsetWidth/2+'px';
+
+oLeft.onclick  = function(){
+/* 	var i = 0;
+	i++;
+	console.log(i); */
+	for(var i = 0;i<oLi.length;i++){
+		console.log(i);	
+		//oUl.style.transform += "translate(-"+i*100+"px)";
+		
+	}
+}
+oRight.onclick  = function(){
+	for(var i = 0;i<oLi.length;i++){
+		console.log(i);	
+		oUl.style.transform += "translate("+i*100+"px)";
+	}
 }
 }
