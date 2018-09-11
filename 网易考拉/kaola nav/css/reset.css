@@ -86,6 +86,7 @@ header .down form .color{color: #FF1E32;}
 
 header .down .Categories1 div:nth-child(3){width: 107.91px;height: 44px;border: 2px solid #FF2337;box-sizing:border-box;border-radius: 22px;margin-left: 50px;margin-top: 19px;text-align: center;line-height: 0px;}
 header .down .Categories1 div:nth-child(3) img{width: 27px;margin-left: 12px;margin-top: 6px;}
+header .down .Categories1 div:nth-child(3) a{color: #000;}
 header .down .Categories1 div:nth-child(3) span{display: block; font-size: 0.8rem;float: right;margin-right: 16px;margin-top: 20px;}
 
 

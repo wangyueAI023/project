@@ -3,6 +3,7 @@ var oBtn1 = document.getElementById('btn1');
 var oBtn2 = document.getElementById('btn2');
 var oMsg = document.getElementById('msg');
 //结算
+(function(){
 var i=1;
 oBtn1.onclick=function(){
 	if(i>1){
@@ -20,6 +21,7 @@ oBtn2.onclick=function(){
 	oMsg.value=i;
 	//console.log(oMsg.value);
 }
+})()
 //头部固定
 window.onscroll = function() {
 	var title = document.getElementsByClassName('P_nav')[0];
@@ -43,8 +45,8 @@ var oBigImg = oBig.getElementsByTagName("img")[0];
 oMask.onmousemove = function(ev){
     var e = ev || window.event;
     //使鼠标在oDrag中正中位置.
-    var left = e.clientX - oDrag.offsetWidth; 
-	var top = e.clientY - oDrag.offsetHeight;  
+    var left = e.clientX - oDrag.offsetWidth*1.1; 
+	var top = e.clientY - oDrag.offsetHeight*0.9;  
 	//console.log(oDrag.offsetWidth)
 	
     //oDrag只能在OMask的范围内移动
@@ -85,6 +87,9 @@ var oSmall_oImg = oSmall.getElementsByTagName("img")[0];
 oUl.addEventListener("click",function(e){
 		//console.log(e.target);
 		oSmall_oImg.src = e.target.src;
+		if(e.target==oUl){
+			oSmall_oImg.src = "images/400_400.jpg";
+		};
 		//console.log(oSmall_oImg);
 },false)
 /* 点击左右换图片 */
@@ -93,21 +98,25 @@ oUl.style.width = oUl.offsetWidth*2+'px';
 
 //if(-oUl.offsetLeft >=oUl.offsetWidth/2) oUl.style.left = 0;
 //if(oUl.offsetLeft >0) oUl.style.left = -oUl.offsetWidth/2+'px';
-
+var j = 0;
+	
 oLeft.onclick  = function(){
-/* 	var i = 0;
-	i++;
-	console.log(i); */
-	for(var i = 0;i<oLi.length;i++){
-		console.log(i);	
-		//oUl.style.transform += "translate(-"+i*100+"px)";
-		
-	}
+	j++;
+	console.log(j);
+	oUl.style.left = 100*j+"px";	
+	if(oUl.offsetLeft >0){
+		oUl.style.left = -oUl.offsetWidth/2+'px';
+		j = -6;
+	} 
 }
+
 oRight.onclick  = function(){
-	for(var i = 0;i<oLi.length;i++){
-		console.log(i);	
-		oUl.style.transform += "translate("+i*100+"px)";
-	}
+	j--;
+	//console.log(j);
+	oUl.style.left = 100*j+"px";
+	if(-oUl.offsetLeft >=oUl.offsetWidth/2){
+		oUl.style.left = 0;
+		j = 0;
+	} 
 }
 }
