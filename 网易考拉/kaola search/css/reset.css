@@ -79,8 +79,10 @@ header .down div:first-child{width: 1349px;height: 100px;}
 header .down div:first-child div:nth-child(1){width: 472.14px;height: 100px;text-align: center;}
 header .down div:first-child div:nth-child(1) img{margin-top:12px;}
 header .down div:first-child div:nth-child(2){width: 512.61px;height: 79px;padding-top: 20px;}
-header .down div:first-child div:nth-child(2) input{width: 507.5px;height: 43px;border: 2px solid #FF2337;box-sizing:border-box;border-radius: 22px;}
-header .down div:first-child div:nth-child(2) input:focus{outline: none;}
+header .down div:first-child div:nth-child(2)  div{width: 507.5px;height: 43px;border: 2px solid #FF2337;border-radius: 22px;overflow: hidden;position: relative;}
+header .down div:first-child div:nth-child(2)  div input{width: 440px;height: 30px;border: none;position: absolute;top: 5px;left: 20px;}
+header .down div:first-child div:nth-child(2)  div input:focus{outline: none;}
+header .down div:first-child div:nth-child(2)  div img{width: 30px;height: 30px; margin-top:2px;position: absolute;top: 5px;right: 10px;}
 header .down form a{margin-left: 30px;font-size: 0.5rem;color: #ccc;}
 header .down form .color{color: #FF1E32;}
 
