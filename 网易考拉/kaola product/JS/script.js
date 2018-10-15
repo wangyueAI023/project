@@ -38,6 +38,7 @@ window.onscroll = function() {
 	}
 }
 //放大镜
+var oSmall = document.getElementById('small');
 var oDrag = document.getElementById("drag");
 var oMask = document.getElementById("mask");//遮罩层
 var oBig = document.getElementById("big");
@@ -45,8 +46,9 @@ var oBigImg = oBig.getElementsByTagName("img")[0];
 oMask.onmousemove = function(ev){
     var e = ev || window.event;
     //使鼠标在oDrag中正中位置.
-    var left = e.clientX - oDrag.offsetWidth*1.1; 
-	var top = e.clientY - oDrag.offsetHeight*0.9;  
+    var left = e.pageX -oSmall.offsetLeft - oDrag.offsetWidth*0.5; 
+	var top = e.pageY -oSmall.offsetTop- oDrag.offsetHeight*0.5;  
+	console.log(window.scrollTop)
 	//console.log(oDrag.offsetWidth)
 	
     //oDrag只能在OMask的范围内移动
