@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6{ margin:0; padding:0}
+body{ font-size:12px; line-height:1.7em; color:#666;}
+ul{ list-style:none}
+img{ border:none}
+a{ text-decoration:none; color:#666;}
+a:hover{ text-decoration:underline;}
+.fl{ float:left}
+.fr{ float:right}
+.clear{ clear:both; overflow:hidden; height:0}
+.center{ width:1000px; margin:0 auto;}
+a:hover img {
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	transition: all .2s linear;
+}
+.clearfix:after{
+   content:".";/*加一段内容*/
+   display:block;/*让生成的元素以块级元素显示，占满剩余空间*/
+   height:0;/*避免生成的内容破坏原有布局高度*/
+   clear:both;/*清除浮动*/
+   visibility:hidden;/*让生成的内容不可见*/
+  }
+ .clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+
+header{background: #E0433A;width: 100%;position: fixed;top: 0;z-index: 3;}
+header .top{display: flex;justify-content: space-between;position: relative;z-index: 2;}
+header .top .left{width: 40px;height: 40px;}
+header .top .left img{width: 100%;height: 100%;}
+header .top .right{width: 40px;height: 40px;}
+header .top .right img{width: 100%; height: 100%;}
+/* 标题-中间 */
+header .top_center{width: 100%;display: flex;position: absolute;top: 0;justify-content: center;}
+header .top_center .music{width: 40px;height: 40px;margin-right:10px;}
+header .top_center .music img{width: 100%;height: 100%;}
+header .top_center .home{width: 40px;height: 40px;margin-right:10px;}
+header .top_center .home img{width: 100%;height: 100%;}
+header .top_center .play_1{width: 40px;height: 40px;}
+header .top_center .play_1 img{width: 100%;height: 100%;}
+/* 头部列表 */
+.list-top{width: 100%;height: 50px;overflow: auto;}
+.list-top ul{width: 690px;height: 50px;background:#E0433A;font-size: 1.5em;color: #fff;}
+.list-top ul li{float: left;width: 50px;height: 40px;line-height:50px;text-align: center;margin: 0 5px;}
+.list-top ul li:nth-child(1){border-bottom: 3px solid #fff;}
+.list-top ul li:nth-child(2){width: 90px;}
+.list-top ul li:nth-child(5){width: 70px;}
+.list-top ul li:nth-child(8){width: 80px;}
+/* 视频 */
+main{width: 100%;margin-top: 89px;margin-bottom: 55px;}
+.vid{text-align: center;}
+video{width: 95%;height: 200px;margin-top: 10px;}
+.describe{width: 95%;margin: 0 10px;font-size: 1.2em;color: #000;}
+.describe p{border-bottom: 1px solid rgb(238, 236, 236);padding: 10px;}
+.videoInformation{width: 100%;display: flex;justify-content: space-between;margin-top: 10px;}
+.videoInformation img{width: 20px;height: 20px;}
+/* 用户名 */
+.information_1{display: flex;}
+.information_1 img{width: 30px;height: 30px;border-radius: 20px;border: 1px solid #ccc;margin-right: 5px;}
+.information_1 span{display: inline-block;padding-top: 6px;}
+/* 右边 */
+.videoInformation .right{display: flex;}
+.information_2{display: flex;margin-right: 20px;}
+.information_2 img{width: 20px;height: 20px;margin-right: 5px;margin-top: 6px;}
+.information_2 span{display: inline-block;padding-top: 6px;}
+.information_3{display: flex;margin-right: 20px;}
+.information_3 img{width: 20px;height: 20px;margin-right: 5px;margin-top: 6px;}
+.information_3 span{display: inline-block;padding-top: 6px;}
+.videoInformation .right img{margin-top: 6px;}
+
+
+/* 尾部歌单播放固定 */
+footer{position: fixed;bottom: 0;border-top:1px solid #ccc;width: 100%;background: #fff;display: flex;}
+footer .img{width: 47px;margin: 3px 10px 5px 5px;height: 47px;float: left;}
+footer .img img{width: 47px;;height: 47px;}
+footer .music_list_down{width: 94%;float: left;}
+footer .music_list_down .font{margin-top:5px;float: left;}
+footer .music_list_down .play{float: right;}
+footer .music_list_down .play img{width: 40px;height: 40px;;margin-top:8px;}
+
+
+
+
+@media (min-width:768px){
+    /* 统一改头部图标 */
+    header .top .left{width: 70px;height: 70px;}
+    header .top .right{width: 70px;height: 70px;}
+    header .top_center .music{width: 70px;height: 70px;margin-right:70px;}
+    header .top_center .home{width: 70px;height: 70px;margin-right:70px;}
+    header .top_center .play_1{width: 70px;height: 70px;}
+    /* ----------------------------------------------- */
+    .list-top ul{height: 70px;font-size: 2.5em;margin-top: 20px;}
+    .list-top ul li{height: 50px;}
+    main{margin-top: 159px;}
+    /* 滑动标题 */
+    .list-top{height: 85px;}
+    .list-top ul{width: 1150px;}
+    .list-top ul li{font-size: 1.1em;width: 80px;}
+    .list-top ul li:nth-child(2){width: 200px;}
+    .list-top ul li:nth-child(5){width: 130px;}
+    .list-top ul li:nth-child(8){width: 155px;}
+
+
+    /* 底部 */
+    footer .img{width: 80px;height: 80px;}
+    footer .img img{width: 90px;height: 90px;margin: 5px;}
+    footer .music_list_down .font{font-size: 2em;margin-left: 20px;}
+    footer .music_list_down .font p{margin: 20px}
+    footer .music_list_down .play img{width: 80px;height: 80px;}
+}
+
+
+
+@media (min-width:1024px){
+    
+}
