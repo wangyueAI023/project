@@ -1,6 +1,23 @@
-var oMain = document.getElementsByTagName("main")[0];
-var oPic = document.getElementById("pic");
-(function(){
-    oPic.style.height = oMain.style.height = window.screen.height/2 + "px";
-    //oPic.style.marginTop = (oMain.style.height - oPic.style.height)/2 + "px";
-})()
+window.onload=function(){
+        var img = document.getElementById("pic");
+        var timeout, rotate = 0;
+        function startAnim() {
+            timeout = setInterval(function () {
+                var rotateStyle = "rotate(" + rotate + "deg)";
+                img.style.transform = rotateStyle;
+ 
+                rotate += 1;
+                if (rotate > 360) {
+                    rotate = 0;
+                }
+            }, 30);
+        }
+        function stopAnim() {
+            clearInterval(timeout);
+            timeout = null;
+        }
+ 
+        startAnim();
+
+}
+
