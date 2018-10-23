@@ -34,7 +34,11 @@ header .top .left img{width: 100%;height: 100%;}
 header .top .right{width: 40px;height: 40px;}
 header .top .right img{width: 100%; height: 100%;}
 /* 标题-中间 */
+<<<<<<< HEAD
 header .top_center{width: 60%;display: flex;position: absolute;top: 0;left:22%;justify-content: space-evenly;z-index: 4;}
+=======
+header .top_center{width: 100%;display: flex;position: absolute;top: 0;justify-content: center;}
+>>>>>>> 3e70747bf7c53e91bcd789369c47ea0b7cfae89a
 header .top_center .music{width: 40px;height: 40px;margin-right:10px;}
 header .top_center .music img{width: 100%;height: 100%;}
 header .top_center .home{width: 40px;height: 40px;margin-right:10px;}
