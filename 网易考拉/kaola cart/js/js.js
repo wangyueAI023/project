@@ -1,5 +1,61 @@
 window.onload = function(){
-var oBtn1 = document.getElementById("btn1");
+	var productList = document.getElementsByClassName("watch");
+	new Vue({
+		el:"#app",
+		data:{
+			productList:[
+                {
+                    "name":"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
+                    "price":"2588.00",
+                },
+                {
+                    "name":"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
+                    "price":"2588.00",
+                },
+                {
+                    "name":"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
+                    "price":"2588.00",
+                },
+                {
+                    "name":"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
+                    "price":"2588.00",
+                },
+			],
+			checked:[],
+		},
+		methods:{
+			del(index){
+                this.productList.splice(index,1);
+                console.log(this.productList[index].name);
+			},
+			delAll(){
+                let arr = this.productList.filter((val, index)=>{
+                    if(!this.checked.includes(index)){
+                        return val
+                    }
+                })
+                this.productList = arr;
+                this.checked = [];
+			},
+			sum(){
+				//
+			},
+		},
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* var oBtn1 = document.getElementById("btn1");
 var oBtn2 = document.getElementById("btn2");
 var oMsg1 = document.getElementById("msg1");
 var oBtn3 = document.getElementById("btn3");
@@ -58,5 +114,5 @@ oBtn4.onclick=function(){
 	oAccounts.innerHTML =  parseInt(oMoney1.innerText) + (n*1885.00)+".00";
 	oAmount.innerHTML = parseInt(oMsg1.value)+parseInt(oMsg2.value);
 	console.log(oMsg2.value);
-}
+} */
 }

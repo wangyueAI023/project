@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script src="js/vue.js"></script>
 	<script src="js/js.js"></script>
 </head>
 <body>
@@ -93,17 +94,19 @@
 	     <p>操作</p>
 	</div>
 	<!-- 一家店里的商品 -->
+<div id="app">
 	<div class="introduction">
 		<p class="fl Self-employed1"><input type="checkbox" />&nbsp;&nbsp;<span>自营</span></p>
 		<p class="fl Self-employed2">自营国内仓</p>
 	</div>
-	<div class="watch">
+	<!-- 一件商品 -->
+	<div class="watch"  id="watch"  v-for="(product, index) in productList" >
 		 <div>
-		      <p><input type="checkbox" /></p>
+		      <p><input type="checkbox" @click.stop="" v-model="checked" :value="index"/></p>
 		      <img src="images/1c0lhqjv933_800_800.png">
 		 </div>
 	     <div>
-	         <span class="con1">【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)</span>
+	         <span class="con1">{{product.name}}</span>
 	         <span class="con2"><img src="images/8920d678-86fd-4c3f-8287-5a45bce40964.png"> 不支持7天无理由退货</span>
 	     </div>
 	     <div>
@@ -111,8 +114,8 @@
 	     	<p>尺寸：38毫米</p>
 	     </div>
 	     <div>
-	        <p class="p1"><del>2588.00</del></p>
-	        <p>2588.00</p>
+	        <p class="p1"><del>{{product.price}}</del></p>
+	        <p>{{product.price}}</p>
 	     </div>
 	     <div>
 	          <button id="btn1">-</button>
@@ -120,55 +123,15 @@
 	          <button id="btn2">+</button>
 	     </div>
 	     <div>
-	     	<p id="money1">2588.00</p>
+	     	<p id="money1">{{product.price}}</p>
 	     </div>
 	     <div>
-	         <p class="p1"><a href="#">删除</a></p>
+	         <p class="p1"><a href="#" @click.stop="del(index)">删除</a></p>
 	         <p><a href="#">移入我的收藏</a></p>
 	     </div>
 	</div>
-	<div class="settleaccounts">
-		<ul class="fr">
-			<li>活动优惠：-￥0.00</li>
-			<li>商品应付总计：￥0.00</li>
-			<li>预估税费：￥0.00</li>
-	    </ul>
-	</div>
-	<!-- 一家店里的商品 -->
-	<div class="introduction">
-		<p class="fl Self-employed1"><input type="checkbox" />&nbsp;&nbsp;<span>自营</span></p>
-		<p class="fl Self-employed2">自营国内仓</p>
-	</div>
-	<div class="watch">
-		 <div>
-		      <p><input type="checkbox" /></p>
-		      <img src="images/1f96e03eef6d426c8dccf556285d71861532922040363jk7q7cb910264.jpg">
-		 </div>
-	     <div>
-	         <span class="con1">【小P老师推荐】HIVITA Luminous White 希维塔洛美纳斯 白番茄美白套装</span>
-	         <span class="con2"><img src="images/8920d678-86fd-4c3f-8287-5a45bce40964.png"> 不支持7天无理由退货</span>
-	     </div>
-	     <div>
-	     	<p class="p1"></p>
-	     	<p></p>
-	     </div>
-	     <div>
-	        <p class="p1"><del>1988.00</del></p>
-	        <p>1885.00</p>
-	     </div>
-	     <div>
-	          <button id="btn3">-</button>
-	          <input type="text"   value="1" id="msg2"/>
-	          <button id="btn4">+</button>
-	     </div>
-	     <div>
-	     	<p id="money2">1885.00</p>
-	     </div>
-	     <div>
-	         <p class="p1"><a href="#">删除</a></p>
-	         <p><a href="#">移入我的收藏</a></p>
-	     </div>
-	</div>
+
+	<!-- 价钱结算 -->
 	<div class="settleaccounts">
 		<ul class="fr">
 			<li>活动优惠：-￥0.00</li>
@@ -181,11 +144,11 @@
 		<div class="left fl">
 			<input type="checkbox" />
 			<span>全选</span>
-			<span><a href="#">删除选中商品</a></span>
+			<span><a href="#" @click="delAll">删除选中商品</a></span>
 		</div>
 		<div class="right fr">
 			<div class="right1 fl">
-			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;" id="amount">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;" id="accounts">￥0.00</span></p>
+			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;" id="amount">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;" id="accounts">￥{{sum()}}</span></p>
 			     <p class="p2">
 			     	<span>活动优惠：-￥0.00</span>
 			     	<span>商品应付总计：￥0.00</span>
@@ -195,6 +158,7 @@
 			<div class="right2 fl">去结算</div>
 		</div>
 	</div>
+</div>
 	<!-- 最佳搭配 -->
 	<div class="Bestmatch">
 		<p>最佳搭配<span>根据你的购物车商品推荐</span></p>
