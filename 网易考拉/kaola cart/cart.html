@@ -86,7 +86,7 @@
 		</p>
 	</div>
 	<div class="shoppingcart-all">
-	     <p><input type="checkbox" v-model="checked" @click = "sel"/>&nbsp;&nbsp;全选</p>
+	     <p><input type="checkbox"@click="handleChecked()" v-model="allChecked"/>&nbsp;&nbsp;全选</p>
 	     <P>商品信息</P>
 	     <p></p>
 	     <p>单价(元)</p>
@@ -97,14 +97,14 @@
 	<!-- 一家店里的商品 -->
 
 	<div class="introduction">
-		<p class="fl Self-employed1"><input type="checkbox" v-model="checked" @click = "sel"/>&nbsp;&nbsp;<span>自营</span></p>
+		<p class="fl Self-employed1"><input type="checkbox" @click="handleChecked()" v-model="allChecked"/>&nbsp;&nbsp;<span>自营</span></p>
 		<p class="fl Self-employed2">自营国内仓</p>
 	</div>
 	<!-- 一件商品 -->
 	<div class="watch"  id="watch"  v-for="(item,index) in list" >
 		 <div>
 			  <p>
-				  <input type="checkbox"  @click="radios(index)" v-model="checked" :value="index"/>
+				  <input type="checkbox"  @click="radios(index)" v-model="item.checked" :value="index"/>
 			 </p>
 		      <img src="images/1c0lhqjv933_800_800.png">
 		 </div>
@@ -145,7 +145,7 @@
 	<!-- 结算 -->
 	<div class="total">
 		<div class="left fl">
-			<input type="checkbox" v-model="checked" @click = "sel"/>
+			<input type="checkbox" @click="handleChecked()" v-model="allChecked"/>
 			<span>全选</span>
 			<span><a href="#" @click="delAll">删除选中商品</a></span>
 		</div>

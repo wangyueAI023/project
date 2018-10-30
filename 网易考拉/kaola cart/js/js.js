@@ -8,6 +8,8 @@ window.onload = function(){
 			money: 0,
 			//默认总数量
 			num: 0,
+			//全选
+			allChecked:false,
 			//					购物车假数据
 
 			list:[
@@ -116,14 +118,24 @@ window.onload = function(){
 				this.hh();
 			},
 			//全选
-			sel(){
-				for(let i = 0; i < oInput.length; i++) {
-					if(oInput[i].type == "checkbox"){
-						console.log("==>"+oInput[i].checked)
-						oInput[i].checked = true;
-					}	
+			handleChecked: function(item) {
+				//全选
+				
+				if(this.allChecked==false) {
+					for(var i = 0; i < this.list.length; i++) {
+						var item = this.list[i];
+						item.checked = true;
+						//item.selected = true;
+						console.log(item.checked, item.selected)
+					}
+				} else {  //取消全选
+					for(var i = 0; i < this.list.length; i++) {
+                        var item = this.list[i];
+						item.checked = false;
+					}
 				}
-			},
+				this.allChecked = !this.allChecked;
+			}
 		}
 	})
 
