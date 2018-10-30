@@ -72,8 +72,9 @@
 		</div>
 </header>
 <main>
+<div id="app">
 	<div class="shoppingcart-top">
-		<span class="s1">我的购物车 2</span>
+		<span class="s1">我的购物车 {{list.length}}</span>
 		<p class="fr">
 		     <span>配送至</span>
 		     <select>
@@ -85,7 +86,7 @@
 		</p>
 	</div>
 	<div class="shoppingcart-all">
-	     <p><input type="checkbox" />&nbsp;&nbsp;全选</p>
+	     <p><input type="checkbox" v-model="checked" @click = "sel"/>&nbsp;&nbsp;全选</p>
 	     <P>商品信息</P>
 	     <p></p>
 	     <p>单价(元)</p>
@@ -94,19 +95,21 @@
 	     <p>操作</p>
 	</div>
 	<!-- 一家店里的商品 -->
-<div id="app">
+
 	<div class="introduction">
-		<p class="fl Self-employed1"><input type="checkbox" />&nbsp;&nbsp;<span>自营</span></p>
+		<p class="fl Self-employed1"><input type="checkbox" v-model="checked" @click = "sel"/>&nbsp;&nbsp;<span>自营</span></p>
 		<p class="fl Self-employed2">自营国内仓</p>
 	</div>
 	<!-- 一件商品 -->
-	<div class="watch"  id="watch"  v-for="(product, index) in productList" >
+	<div class="watch"  id="watch"  v-for="(item,index) in list" >
 		 <div>
-		      <p><input type="checkbox" @click.stop="" v-model="checked" :value="index"/></p>
+			  <p>
+				  <input type="checkbox"  @click="radios(index)" v-model="checked" :value="index"/>
+			 </p>
 		      <img src="images/1c0lhqjv933_800_800.png">
 		 </div>
 	     <div>
-	         <span class="con1">{{product.name}}</span>
+	         <span class="con1">{{item.name}}</span>
 	         <span class="con2"><img src="images/8920d678-86fd-4c3f-8287-5a45bce40964.png"> 不支持7天无理由退货</span>
 	     </div>
 	     <div>
@@ -114,19 +117,19 @@
 	     	<p>尺寸：38毫米</p>
 	     </div>
 	     <div>
-	        <p class="p1"><del>{{product.price}}</del></p>
-	        <p>{{product.price}}</p>
+	        <p class="p1"><del>{{item.money}}</del></p>
+	        <p>{{item.money}}</p>
 	     </div>
 	     <div>
-	          <button id="btn1">-</button>
-	          <input type="text"  value="1" id="msg1"/>
-	          <button id="btn2">+</button>
+	          <button id="btn1" @click="btn_minute(index)">-</button>
+	          <input type="text"  value="1" id="msg1" v-model="item.num"/>
+	          <button id="btn2" @click="btn_add(index)">+</button>
 	     </div>
 	     <div>
-	     	<p id="money1">{{product.price}}</p>
+	     	<p id="money1">{{item.money}}</p>
 	     </div>
 	     <div>
-	         <p class="p1"><a href="#" @click.stop="del(index)">删除</a></p>
+	         <p class="p1"><a href="#" @click="delerte(index)">删除</a></p>
 	         <p><a href="#">移入我的收藏</a></p>
 	     </div>
 	</div>
@@ -142,13 +145,13 @@
 	<!-- 结算 -->
 	<div class="total">
 		<div class="left fl">
-			<input type="checkbox" />
+			<input type="checkbox" v-model="checked" @click = "sel"/>
 			<span>全选</span>
 			<span><a href="#" @click="delAll">删除选中商品</a></span>
 		</div>
 		<div class="right fr">
 			<div class="right1 fl">
-			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;" id="amount">0</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;" id="accounts">￥{{sum()}}</span></p>
+			     <p class="p1">已选商品<span style="color: #E31436;font-size: 24px;" id="amount">{{num}}</span>件&nbsp;&nbsp;&nbsp;&nbsp;总价(不含运费)：<span style="color: #E31436;font-size: 24px;" id="accounts">￥{{money}}</span></p>
 			     <p class="p2">
 			     	<span>活动优惠：-￥0.00</span>
 			     	<span>商品应付总计：￥0.00</span>
