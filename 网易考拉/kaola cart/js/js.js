@@ -13,7 +13,8 @@ window.onload = function(){
 			//					购物车假数据
 
 			list:[
-                {
+                {	
+					pic:"images/1c0lhqjv933_800_800.png",
                     name:"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
 					money:"2588.00",
 					num: 1,
@@ -21,18 +22,21 @@ window.onload = function(){
 
                 },
                 {
+					pic:"images/1f96e03eef6d426c8dccf556285d71861532922040363jk7q7cb910264.jpg",
                     name:"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
 					money:"2588.00",
 					num: 1,
 					selected: false,
                 },
                 {
+					pic:"images/11e893ea-4e91-4b57-988c-ed695e354b10.jpg",
                     name:"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
 					money:"2588.00",
 					num: 1,
 					selected: false,
                 },
                 {
+					pic:"images/b184cf08-af7e-491c-bed4-c874f92e3b2a.jpg",
                     name:"【黑卡96折】Apple Watch Series 3智能手表 38mm （GPS款)",
 					money:"2588.00",
 					num: 1,
@@ -55,11 +59,11 @@ window.onload = function(){
 			}
 			this.money = price;
 			this.num = numb;
-			console.log(numb);
-			console.log(price);
+			//console.log(numb);
+			//console.log(price);
 		},
 		methods: {
-			//总价总数量方法   方便调用   再次多写了一次[可以跟初始化封装为一个方法]
+			//总价总数量方法
 			hh: function() {
 				var price = 0;
 				var numb = 0;
@@ -72,17 +76,18 @@ window.onload = function(){
 				}
 				this.money = price;
 				this.num = numb;
-				console.log(numb);
+				//console.log(numb);
 			},
 			//删除购物车列表
 			delerte: function(index) {
 				this.list.splice(index, 1);
+				this.hh();
 			},
-			//删除所有
+			//删除选中的
 			delAll(){
                 let arr = this.list.filter((val, index)=>{
-                    if(this.checked.includes(index)){
-                        return val
+                    if(!this.checked.includes(index)){
+						return val
                     }
 				})
 				this.checked=[];
@@ -90,14 +95,15 @@ window.onload = function(){
 				this.num = 0;
                 this.list = arr;
 				this.selected = false;
-				console.log(arr)
-            },
+				console.log(arr);
+				this.hh();
+			},
 			//选中未选中
 			radios: function(index) {
 				var list = this.list;
 				list[index].selected = !list[index].selected;
 				this.hh();
-				console.log(list[index].selected)
+				//console.log(list[index].selected)
 			},
 			//添加
 			btn_add: function(index) {
@@ -120,22 +126,25 @@ window.onload = function(){
 			//全选
 			handleChecked: function(item) {
 				//全选
-				
 				if(this.allChecked==false) {
 					for(var i = 0; i < this.list.length; i++) {
 						var item = this.list[i];
-						item.checked = true;
-						//item.selected = true;
-						console.log(item.checked, item.selected)
+						this.checked.push(i);
+						item.selected = true;
+						this.hh();
+						//console.log(item.checked, item.selected)
 					}
 				} else {  //取消全选
 					for(var i = 0; i < this.list.length; i++) {
                         var item = this.list[i];
-						item.checked = false;
+						this.checked=[];
+						item.selected = false;
+						this.hh();
 					}
 				}
 				this.allChecked = !this.allChecked;
 			}
+			
 		}
 	})
 

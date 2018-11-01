@@ -101,12 +101,13 @@
 		<p class="fl Self-employed2">自营国内仓</p>
 	</div>
 	<!-- 一件商品 -->
-	<div class="watch"  id="watch"  v-for="(item,index) in list" >
+	<div class="watch"  id="watch"  v-for="(item,index) in list" :key="checked.id">
 		 <div>
 			  <p>
-				  <input type="checkbox"  @click="radios(index)" v-model="item.checked" :value="index"/>
+				  <input type="checkbox"  @click="radios(index)"  v-model="checked" :value="index"/>
 			 </p>
-		      <img src="images/1c0lhqjv933_800_800.png">
+			  <!-- <img src="images/1c0lhqjv933_800_800.png"> -->
+			  <img :src="item.pic" />
 		 </div>
 	     <div>
 	         <span class="con1">{{item.name}}</span>
@@ -147,7 +148,7 @@
 		<div class="left fl">
 			<input type="checkbox" @click="handleChecked()" v-model="allChecked"/>
 			<span>全选</span>
-			<span><a href="#" @click="delAll">删除选中商品</a></span>
+			<span><a href="#" @click="delAll()">删除选中商品</a></span>
 		</div>
 		<div class="right fr">
 			<div class="right1 fl">
