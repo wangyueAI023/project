@@ -73,13 +73,21 @@ aside .aside_down div p{font-size: 1.2em;line-height: 50px;margin-right: 6px;}
 /* 列表 */
 main{width: 100%;margin-bottom: 55px;margin-top:40px;}
 main .list_1{display: flex;}
-main .list_1 img{width: 40px;height: 45px;margin-right: 10px;}
+main .list_1 img{width: 25px;height: 25px;margin-right: 10px;margin-top:10px;margin-left: 5px;}
 main .list_1 div{width: 95%;height: 40px;border-bottom: 1px solid rgba(204, 204, 204, 0.623);display: flex;}
 main .list_1 div .font1{font-size: 1rem;line-height: 40px;color: #000;}
 main .list_1 div p{line-height: 40px;color: #666;}
+
+/* 第一个 */
+
+main .list_first_1{display: flex;}
+main .list_first_1 img{width: 23px;height: 23px;margin-right: 10px;margin-left: 5px;margin-top:10px;}
+main .list_first_1 div{width: 95%;height: 40px;display: flex;border-bottom: 1px solid rgba(204, 204, 204, 0.623);}
+main .list_first_1 div .font1{font-size: 1rem;line-height: 40px;color: #000;}
+main .list_first_1 div p{line-height: 40px;color: #666;}
 /* 列表-最后一个 */
 main .list_last_1{display: flex;}
-main .list_last_1 img{width: 40px;height: 40px;margin-right: 10px;}
+main .list_last_1 img{width: 25px;height: 25px;margin-right: 10px;margin-left: 4px;margin-top:6px;}
 main .list_last_1 div{width: 95%;height: 40px;display: flex;}
 main .list_last_1 div .font1{font-size: 1rem;line-height: 40px;color: #000;}
 main .list_last_1 div p{line-height: 40px;color: #666;}
