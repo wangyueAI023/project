@@ -4,7 +4,7 @@ body,ul,li,p,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,div{ margin:0; padding:0},
 body{ font-size:12px; line-height:1.7em; color:#666;}
 ul{ list-style:none}
 img{ border:none}
-a{text-decoration:none;}
+a{text-decoration:none;color: #6e6e6e;}
 a:hover {text-decoration:none;}
 .fl{ float:left}
 .fr{ float:right}
@@ -27,8 +27,51 @@ a:hover img {
   }
  .clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
 
-
-.top{width: 100%;height: 728px;background: url(../images/top.jpg) repeat-x;}
+/* 头部导航 */
+header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat;position: relative;}
 .topList{width: 100%;height: 83px;border-bottom: 1px solid #B2BDA4;}
+.topTitle{display: flex;}
 .logo{width: 501px;height: 83px;}
-.firstList{width: 502px;height: 83px;}
+.firstList{width: 502px;height: 83px;display: flex;justify-content:space-evenly;}
+.firstList li{width: 56px;text-align: center;line-height: 83px;font-size: 14px;}
+.firstList li:first-child{width: 28px;border-bottom:1px solid #fff}
+.firstList li a{color:#fff;}
+/* 左右尖角号 */
+.topList .left{width: 31px;height: 31px;border: 3px solid #B2BDA4;border-top: none;border-right: none;transform: rotate(45deg);position: absolute;top:350px;left: 50px;cursor: pointer;}
+.topList .right{width: 31px;height: 31px;border: 3px solid #B2BDA4;border-bottom: none;border-left: none;transform: rotate(45deg);position: absolute;top:350px;right: 50px;cursor: pointer;}
+/* 查看更多 */
+.topList .more{color: #fff;font-size: 14px;width: 113px;height: 38px;;border: 1px solid #fff;border-radius:38px;position: absolute;top: 432px;left: 240px;text-align: center;line-height: 38px;}
+/* 点击原点 */
+.CircleList{width: 100%;height: 13px;position: absolute;bottom: 20px;}
+.CircleList ul{width: 85px;display: flex;justify-content: space-evenly;}
+.CircleList ul li{width: 13px;height: 13px;border-radius: 13px;cursor: pointer;background: #fff;}
+/* 关于我们 */
+.companyProfile{margin-bottom: 92px;}
+.aboutus{width: 1003px;background: #fff;text-align: center;}
+.aboutus h1{font-weight:initial;margin: 60px 0 10px 0;}
+.recommend{width: 1003px;display: flex;display: flex;justify-content: space-between;text-align: center;}
+.recommend .title{font-size: 24px;color: #333333;margin: 31px 0 20px 0;}
+.recommend p{font-size: 14px;color: #6e6e6e;margin-bottom: 14px;}
+.recommend .particlars{width: 110px;height: 38px;background: #0a9d56;border-radius: 38px;box-shadow: 5px 5px 30px #c8e0d2;font-size: 14px;color: #fff;line-height: 38px;}
+/*  */
+.goodTea{width: 100%;}
+.goodTea img{width: 100%;height: 100%;}
+/* 精品推荐 */
+.productRecommendation{margin-bottom: 60px;}
+.classify{display: flex;justify-content: space-between;margin: 54px 0 50px 0;}
+.classify p{border: 1px solid #cfcfcf;height: 38px;width: 110px;margin-right: 30px;border-radius: 38px;line-height: 38px;font-size: 14px;text-align: center;}
+.classify .left{margin-left: 60px;}
+.classify .right{margin-right: 60px;}
+.classify .left p{float: left;}
+.classify .right p{float: left;}
+/*  */
+.teaShow ul{display: flex;justify-content: space-between;margin-top:40px;}
+.teaShow .picList{width: 150px;}
+.picList li{width: 25%;height: 4px;}
+
+/* 点击效果 */
+.onclickstyle1{background: #0a9d56;box-shadow: 5px 5px 30px #c8e0d2;color: #fff;}
+.clickstyle2{border: 1px solid #f2f5f3;box-shadow: 10px 10px 30px 2px #f2f5f3;}
+.onclickstyle2{box-shadow: 8px 8px 20px 5px #e2eae5;}
+.clickstyle3{background: #e6e6e6;}
+.onclickstyle3{background: #1bb34d;}
