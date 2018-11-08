@@ -34,8 +34,10 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 .logo{width: 501px;height: 83px;}
 .firstList{width: 502px;height: 83px;display: flex;justify-content:space-evenly;}
 .firstList li{width: 56px;text-align: center;line-height: 83px;font-size: 14px;}
-.firstList li:first-child{width: 28px;border-bottom:1px solid #fff}
-.firstList li a{color:#fff;}
+.firstList a:first-child li{width: 28px;}
+/* 点击效果 */
+.onclickstyle4{border-bottom:1px solid #fff;}
+.firstList li{color:#fff;}
 /* 左右尖角号 */
 .topList .left{width: 31px;height: 31px;border: 3px solid #B2BDA4;border-top: none;border-right: none;transform: rotate(45deg);position: absolute;top:350px;left: 50px;cursor: pointer;}
 .topList .right{width: 31px;height: 31px;border: 3px solid #B2BDA4;border-bottom: none;border-left: none;transform: rotate(45deg);position: absolute;top:350px;right: 50px;cursor: pointer;}
@@ -67,7 +69,7 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 /*  */
 .teaShow ul{display: flex;justify-content: space-between;margin-top:40px;}
 .teaShow .picList{width: 150px;}
-.picList li{width: 25%;height: 4px;}
+.picList li{width: 25%;height: 4px;cursor: pointer}
 
 /* 点击效果 */
 .onclickstyle1{background: #0a9d56;box-shadow: 5px 5px 30px #c8e0d2;color: #fff;}
@@ -75,3 +77,7 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 .onclickstyle2{box-shadow: 8px 8px 20px 5px #e2eae5;}
 .clickstyle3{background: #e6e6e6;}
 .onclickstyle3{background: #1bb34d;}
+
+
+
+
