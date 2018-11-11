@@ -48,10 +48,10 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 .CircleList ul{width: 85px;display: flex;justify-content: space-evenly;}
 .CircleList ul li{width: 13px;height: 13px;border-radius: 13px;cursor: pointer;background: #fff;}
 /* 关于我们 */
-.companyProfile{margin-bottom: 92px;}
+.companyProfile{width: 1003px;margin-bottom: 92px;}
 .aboutus{width: 1003px;background: #fff;text-align: center;}
 .aboutus h1{font-weight:initial;margin: 60px 0 10px 0;}
-.recommend{width: 1003px;display: flex;display: flex;justify-content: space-between;text-align: center;}
+.recommend{width: 1003px;display: flex;justify-content: space-between;text-align: center;}
 .recommend .title{font-size: 24px;color: #333333;margin: 31px 0 20px 0;}
 .recommend p{font-size: 14px;color: #6e6e6e;margin-bottom: 14px;}
 .recommend .particlars{width: 110px;height: 38px;background: #0a9d56;border-radius: 38px;box-shadow: 5px 5px 30px #c8e0d2;font-size: 14px;color: #fff;line-height: 38px;}
@@ -59,7 +59,7 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 .goodTea{width: 100%;}
 .goodTea img{width: 100%;height: 100%;}
 /* 精品推荐 */
-.productRecommendation{margin-bottom: 60px;}
+.productRecommendation{width: 1003px;margin-bottom: 60px;}
 .classify{display: flex;justify-content: space-between;margin: 54px 0 50px 0;}
 .classify p{border: 1px solid #cfcfcf;height: 38px;width: 110px;margin-right: 30px;border-radius: 38px;line-height: 38px;font-size: 14px;text-align: center;}
 .classify .left{margin-left: 60px;}
@@ -77,6 +77,37 @@ header{width: 100%;height: 728px;background: url(../images/banner.png) no-repeat
 .onclickstyle2{box-shadow: 8px 8px 20px 5px #e2eae5;}
 .clickstyle3{background: #e6e6e6;}
 .onclickstyle3{background: #1bb34d;}
+/* 说出你喜欢的茶 */
+.likeTea{width: 100%;height: 210px;position: relative;}
+.likeTea img{width: 100%;height: 100%;}
+.likeTea .input{width: 437px;height: 42px;border: none;background: #fff;border-radius: 42px;box-shadow:0 0 2px 2px #e8f5ec;position: absolute;top: 50%;left: 50%;}
+.likeTea input{width: 380px;height: 35px;border: none;outline:none;margin: 2px 0 0 25px;}
+.likeTea span{display: inline-block;width: 105px;height: 40px;background: #0a9d56;text-align: center;color: #fff;line-height: 40px;border-radius:20px;position: absolute;top: 50%;left: 50%;transform: translateX(470px);}
+/* 新闻中心 */
+.newCenter{width: 1003px;margin-bottom: 100px;}
+.newCenter .good{width: 1003px;display: flex;justify-content: space-between;margin-top: 81px;}
+.good .content{display: flex;width: 50%;}
+.content .right{margin:  0 26px;}
+.right .dateTime{font-size:12px;color: #b8b8b8;}
+.right .teaGood{font-size:22px;color: #333;margin-top: 20px;}
+.right .teaGoodShow{font-size:12px;color: #5d5d5d;line-height: 22px;margin: 20px 0;}
+.right .more{width: 110px;height: 38px;background: #0a9d56;border-radius: 38px;box-shadow: 5px 5px 30px #c8e0d2;font-size: 14px;color: #fff;line-height: 38px;text-align: center;}
+/* 底部 */
+footer{width: 100%;height: 394px;background: url(../images/footer.png) repeat-x}
+.footer{width: 1003px;}
+footer .logo{width: 142px;height: 73px;background: #0a9d56;text-align: center;}
+footer .logo img{width: 130px;height: 60px;}
+.introduce{width: 100%;display: flex;justify-content: space-between;font-size: 12px;color: #737373;}
+.int1{width: 221px;}
+.int2{width: 237px;}
+.int3{width: 339px;display: flex;justify-content: space-between;}
+
+.introduce .title{width: 57px;height: 39px;font-size: 14px;color: #333;}
+.introduce .content{line-height: 25px;}
+.introduce .underL{width: 34px;height: 39px;border-top:2px solid #1bb34d;}
+.introduce li{margin-bottom: 10px;}
+.QRcode{text-align: center;margin-top:44px;}
+.down{width: 100%;font-size: 12px;color: #737373;text-align: center;margin-top:80px;}
 
 
 
