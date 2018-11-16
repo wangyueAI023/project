@@ -63,7 +63,7 @@ main{width: 100%;margin-top: 89px;margin-bottom: 55px;}
 .list_2{width: 100%;height: 40px;display: flex;}
 .list_2 span{font-size: 1.3em;font-weight: bold;color: black;margin: 15px 5px 0 10px;}
 .list_2 p{width: 9px;height: 9px;border-top: 1px solid #666;border-right: 1px solid #666;transform: rotate(45deg);margin-top: 20px;}
-.music_list{width: 100%;height: 150px;display: flex;justify-content: space-evenly;margin-bottom: 10px;}
+.music_list{width: 100%;height: 150px;display: flex;justify-content: space-around;margin-bottom: 10px;}
 .music_list .bulk{width: 100px;height: 135px;}
 .music_list .bulk img{border-radius: 5px;width: 100px;height: 100px;}
 .music_list .bulk p{color: black}
