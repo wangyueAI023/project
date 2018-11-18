@@ -34,7 +34,7 @@ header .top .left img{width: 100%;height: 100%;}
 header .top .right{width: 40px;height: 40px;}
 header .top .right img{width: 100%; height: 100%;}
 /* 标题-中间 */
-header .top_center{width: 60%;display: flex;position: absolute;top: 0;left:22%;justify-content: space-evenly;z-index: 4;}
+header .top_center{width: 60%;display: flex;position: absolute;top: 0;left:50%;transform: translateX(-50%);justify-content: space-around;z-index: 4;}
 header .top_center .music{width: 40px;height: 40px;margin-right:10px;}
 header .top_center .music img{width: 100%;height: 100%;}
 header .top_center .home{width: 40px;height: 40px;margin-right:10px;}
@@ -52,7 +52,7 @@ main{width: 100%;margin-top: 89px;margin-bottom: 55px;}
 .bg-lunbo{width: 100%;height: 90px;background: #E0433A;}
 .lunbo{width: 95%;height: 120px;position: relative;border-radius: 8px;overflow: hidden;}
 .lunbo img{width: 100%;height: 100%;}
-.list-icon{width: 50%;height:10px;position: relative;top: -20px;display: flex;justify-content: space-evenly;}
+.list-icon{width: 50%;height:10px;position: relative;top: -20px;display: flex;justify-content: space-around;}
 .list-icon li{width:8px;height:8px;border-radius: 30px;background: rgb(190, 189, 189);float: left;}
 /* 四个分栏 */
 .classify{width: 100%;height: 130px;border-bottom:1px solid rgb(206, 205, 205);display: flex;align-items: flex-end;justify-content: space-evenly;}
@@ -63,7 +63,7 @@ main{width: 100%;margin-top: 89px;margin-bottom: 55px;}
 .list_2{width: 100%;height: 40px;display: flex;}
 .list_2 span{font-size: 1.3em;font-weight: bold;color: black;margin: 15px 5px 0 10px;}
 .list_2 p{width: 9px;height: 9px;border-top: 1px solid #666;border-right: 1px solid #666;transform: rotate(45deg);margin-top: 20px;}
-.music_list{width: 100%;height: 150px;display: flex;justify-content: space-evenly;margin-bottom: 10px;}
+.music_list{width: 100%;height: 150px;display: flex;justify-content: space-around;margin-bottom: 10px;}
 .music_list .bulk{width: 100px;height: 135px;}
 .music_list .bulk img{border-radius: 5px;width: 100px;height: 100px;}
 .music_list .bulk p{color: black}

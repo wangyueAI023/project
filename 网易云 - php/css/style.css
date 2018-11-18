@@ -37,7 +37,7 @@ header .top .left img{width: 100%;height: 100%;}
 header .top .right{width: 40px;height: 40px;}
 header .top .right img{width: 100%; height: 100%;}
 /* 标题-中间 */
-header .top_center{width: 60%;display: flex;position: absolute;top: 0;left:22%;justify-content: space-evenly;z-index: 4;}
+header .top_center{width: 60%;display: flex;position: absolute;top: 0;left:50%;transform: translateX(-50%);justify-content: space-around;z-index: 4;}
 header .top_center .music{width: 40px;height: 40px;margin-right:10px;}
 header .top_center .music img{width: 100%;height: 100%;}
 header .top_center .home{width: 40px;height: 40px;margin-right:10px;}
@@ -45,7 +45,7 @@ header .top_center .home img{width: 100%;height: 100%;}
 header .top_center .play_1{width: 40px;height: 40px;}
 header .top_center .play_1 img{width: 100%;height: 100%;}
 /* 个人设置 */
-aside{width: 80%;background: #fff;position: fixed;left: 0;top: 0;z-index: 4;display: none;overflow: auto;}
+aside{width: 80%;background: #fff;position: fixed;left: 0;top: 0;z-index: 4;display: none;overflow-y: scroll;}
 aside .top{width: 100%;height: 130px;background: url(../images/timg.jpg) ;background-size: cover;overflow: hidden;position: relative;}
 aside .top .avater{width: 60px;height: 60px;background:#fff;margin: 30px 20px 5px 10px;border-radius: 30px;overflow: hidden;color: #fff;position: relative;z-index: 2;}
 aside .top .avater img{width: 100%;height: 100%;}

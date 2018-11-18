@@ -47,7 +47,7 @@
     <main>
         <!-- 视频块 -->
         <p class="vid">
-            <video src="http://cn-jsnj3-cmcc-v-15.acgvideo.com/upgcxcode/38/72/6627238/6627238-1-16.mp4?expires=1540895400&platform=html5&ssig=rkbsXPS0s0FTSaI7rNO8iQ&oi=1865062936&nfa=ZGlYLwTu0dW3o1gJGPmYTQ==&dynamic=1&hfa=2045459101&hfb=M2Y2ZWYwZjM2YmRiYmY5MDljYTBiOWE2ZmEwYjJmYTM=&trid=9ae725999a4346938beeab8755a4aef0&nfc=1" controls="controls"></video>
+            <video src="movie/huyao.mp4" controls="controls"></video>
         </p>
         <div class="describe">
             <p>【呦猫UNEKO】梦回还【狐妖小红娘王权富贵篇】</p>
@@ -71,7 +71,7 @@
         </div>
          <!-- 视频块 -->
          <p class="vid">
-                <video src="http://cn-zjwz-cmcc-v-08.acgvideo.com/upgcxcode/24/25/55362524/55362524-1-6.mp4?expires=1540894500&platform=html5&ssig=taEvr2O46HI2ifFoib0LfQ&oi=1865062936&nfa=7VMUDqBQpI8VGBbhQ1faUQ==&dynamic=1&hfa=2045458081&hfb=M2Y2ZWYwZjM2YmRiYmY5MDljYTBiOWE2ZmEwYjJmYTM=&trid=07acf0a52f1c4693aa411dfc9c98e553&nfc=1" controls="controls"></video>
+                <video src="movie/kb-n.mp4" controls="controls"></video>
             </p>
             <div class="describe">
                 <p>【排/仙/漏/KB】青衫薄【戏腔】</p>
@@ -95,7 +95,7 @@
             </div>
             <!-- 视频块 -->
          <p class="vid">
-                <video src="http://cn-sdjn2-cmcc-v-03.acgvideo.com/upgcxcode/91/66/57306691/57306691-1-6.mp4?expires=1540894200&platform=html5&ssig=uZBqHDK2LKFGsKrolEsqvg&oi=1865062936&nfa=7VMUDqBQpI8VGBbhQ1faUQ==&dynamic=1&hfa=2045457948&hfb=M2Y2ZWYwZjM2YmRiYmY5MDljYTBiOWE2ZmEwYjJmYTM=&trid=1cd7fed3e81d40068777c8bbc3e0ccf0&nfc=1" controls="controls"></video>
+                <video src="movie/kb-b.mp4" controls="controls"></video>
             </p>
             <div class="describe">
                 <p>【KBShinya】盗将行 白展堂鬼畜翻唱【2P原版翻唱】</p>
@@ -119,7 +119,7 @@
             </div>
              <!-- 视频块 -->
          <p class="vid">
-                <video src="http://cn-sdjn3-cmcc-v-06.acgvideo.com/upgcxcode/40/68/1176840/1176840-1-16.mp4?expires=1540895100&platform=html5&ssig=510t2xrlceI1AWoYu7HhuQ&oi=1865062936&nfa=ZGlYLwTu0dW3o1gJGPmYTQ==&dynamic=1&hfa=2045457684&hfb=M2Y2ZWYwZjM2YmRiYmY5MDljYTBiOWE2ZmEwYjJmYTM=&trid=aa02e9dd50314e1cb027d8363135afde&nfc=1" controls="controls"></video>
+                <video src="movie/pj.mp4" controls="controls"></video>
             </p>
             <div class="describe">
                 <p>【炮姐/AMV】我永远都会守护在你的身边！</p>
